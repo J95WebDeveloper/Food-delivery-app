@@ -7,7 +7,7 @@ const addFood = async (req, res) => {
 
     const ingredients = JSON.parse(req.body.ingredients || "[]");
     const nutrition = JSON.parse(req.body.nutrition || "{}");
-    const imageUrl = `http://localhost:3000/uploads/${req.file.filename}`;
+    const imageUrl = `/uploads/${req.file.filename}`;
 
     const food = await FoodSchema({
       name,
@@ -57,7 +57,7 @@ const removeFood = async (req, res) => {
   try {
     
     const foods = await FoodSchema.findById(req.body.id);
-    fs.unlink(`uploads/${foods.image}`, () => {})
+    fs.unlink(`/uploads/${foods.image}`, () => {})
 
     await FoodSchema.findByIdAndDelete(req.body.id)
 
@@ -99,7 +99,7 @@ const updateFood = async (req, res) => {
 
     // If new image uploaded
     if (req.file) {
-      imageUrl = `http://localhost:3000/uploads/${req.file.filename}`;
+      imageUrl = `/uploads/${req.file.filename}`;
     }
 
     await FoodSchema.findByIdAndUpdate(id, {

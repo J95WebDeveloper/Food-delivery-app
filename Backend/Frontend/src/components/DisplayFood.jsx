@@ -13,6 +13,8 @@ function DisplayFood({ item, offer }) {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
 
+  const BASE_URL = import.meta.env.VITE_API_URL
+
   const handleAdd = (e, itemId) => {
     e.stopPropagation();
     if (!token) {
@@ -32,7 +34,7 @@ function DisplayFood({ item, offer }) {
       >
         <div onClick={() => setOpen(true)} className="overflow-hidden">
           <img
-            src={item.image}
+            src={`${BASE_URL}${item.image}`}
             className="cursor-pointer w-full h-46 object-cover active:scale-120 hover:scale-120 transition-all ease-in-out duration-300"
           />
         </div>

@@ -5,7 +5,7 @@ import { handleError, handleSuccess } from "../components/Toaster";
 export const useLogin = async (values, setOpenLogin, setToken, setUser) => {
   try {
     await axios
-      .post("http://localhost:3000/api/login", values)
+      .post("/api/login", values)
       .then((res) => {
           console.log(res.data);
           handleSuccess(res.data.message);

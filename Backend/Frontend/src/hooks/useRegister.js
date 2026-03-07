@@ -4,7 +4,7 @@ import { handleError, handleSuccess } from "../components/Toaster";
 export const useRegister = async (values, navigate, switchToLogin) => {
   try {
     await axios
-      .post("http://localhost:3000/api/register", values)
+      .post("/api/register", values)
       .then((res) => {
         console.log(res.data);
         handleSuccess(res.data.message);
