@@ -62,10 +62,15 @@ function Footer() {
             </div>
           </div>
         </div>
+
+        <div className="px-6 sm:px-12 lg:px-32">
+          <hr className="py-2" />
+          <div className="text-center text-gray-400 text-[12px] sm:text-sm pb-3 md:pb-5 md:mt-1">
+           Copyright 2024 @ Foody.com- All Right Reserved
+          </div>
+        </div>
       </div>
-      <div className="text-center bg-gray-900 text-white py-4 text-[12px] sm:text-sm">
-        Copyright 2024 @ Foody.com- All Right Reserved
-      </div>
+      
     </>
   );
 }
