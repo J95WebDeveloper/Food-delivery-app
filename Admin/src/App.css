@@ -1,0 +1,22 @@
+.bg {
+  background-image: url("./assets/bg1.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.active {
+  background-color: #100f3d;
+}
+
+.cart {
+  /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.175); */
+}
+
+.btn {
+  background: linear-gradient(0deg, #fd831e 0%, #ec1c2c 90%);
+}
+
+.wrapper::-webkit-scrollbar{
+  width: 0;
+}

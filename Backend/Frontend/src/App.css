@@ -1,0 +1,48 @@
+.bg-veg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(./assets/vegetables-background.svg);
+  background-color: #000;
+  background-position: 0% 0%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn {
+  background: linear-gradient(0deg, #fd831e 0%, #ec1c2c 90%);
+}
+
+.wrapper::before {
+  position: absolute;
+  content: "";
+  background: url("./assets/f-loc-left.png") no-repeat bottom left;
+  width: 303px;
+  height: 100%;
+  z-index: -1;
+}
+
+.widget-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 3px;
+  background-color: #e04006;
+  width: 25px;
+  border-radius: 50px;
+}
+
+.widget:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 4px;
+  background-color: #e04006;
+  width: 90px;
+  border-radius: 50px;
+}
+
+.box {
+  filter: drop-shadow(0 0 10px #333333);
+}
