@@ -32,8 +32,8 @@ function Modal({ item, offer, setOpen, handleAdd }) {
             />
           </div>
           <div className="w-80 md:w-130">
-            <p className="md:mb-1 text-light font-medium">{item.category}</p>
-            <h2 className="text-2xl lg:text-5xl font-medium md:truncate">{item.name}</h2>
+            <p className=" text-light font-medium text-sm">{item.category}</p>
+            <h2 className="text-3xl lg:text-5xl font-medium md:truncate leading-normal">{item.name}</h2>
             <p className="mt-4 text-sm text-gray-400">{item.description}</p>
             <p className="py-4 font-medium text-lg">${item.price}.00 </p>
             <p className="flex gap-2 w-20 items-center justify-center mb-6 md:mb-7 mt-2">
