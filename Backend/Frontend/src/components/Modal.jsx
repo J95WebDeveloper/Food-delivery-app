@@ -33,10 +33,10 @@ function Modal({ item, offer, setOpen, handleAdd }) {
           </div>
           <div className="w-80 md:w-130">
             <p className="md:mb-1 text-light font-medium">{item.category}</p>
-            <h2 className="text-2xl lg:text-5xl font-medium">{item.name}</h2>
+            <h2 className="text-2xl lg:text-5xl font-medium truncate">{item.name}</h2>
             <p className="mt-4 text-sm text-gray-400">{item.description}</p>
             <p className="py-4 font-medium text-lg">${item.price}.00 </p>
-            <p className="flex gap-2 w-20 items-center justify-center mb-6 md:mb-8 mt-2">
+            <p className="flex gap-2 w-20 items-center justify-center mb-6 md:mb-7 mt-2">
               <button
                 onClick={() => removeFromCart(item._id)}
                 className="bg-red-700 px-2 text-red-400 cursor-pointer font-bold">
@@ -55,7 +55,7 @@ function Modal({ item, offer, setOpen, handleAdd }) {
               Add to Cart
             </button>
 
-           { offer && <p className="mt-5 sm:mt-7 flex items-center gap-2 font-medium">
+           { offer && <p className="mt-5 sm:mt-5 flex items-center gap-2 font-medium">
               <span className="bg-secondary text-white px-3 py-1 font-medium flex items-center gap-2 text-sm">
                 <FaGift /> Offer</span> 
                 15% Off
