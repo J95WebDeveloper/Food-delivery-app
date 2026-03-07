@@ -8,7 +8,7 @@ function AuthModal({ setOpenLogin }) {
 
   return (
     <motion.div
-      className="fixed inset-0 bg-gray-700/50 z-50 flex items-center justify-center w-full"
+      className="fixed inset-0 bg-gray-700/70 z-50 flex items-center justify-center w-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
