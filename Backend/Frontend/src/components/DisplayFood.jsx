@@ -13,7 +13,7 @@ function DisplayFood({ item, offer }) {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
 
-  const BASE_URL = import.meta.env.VITE_API_URL
+  const BASE_URL = "https://foodapp-u2ve.onrender.com"
 
   const handleAdd = (e, itemId) => {
     e.stopPropagation();
