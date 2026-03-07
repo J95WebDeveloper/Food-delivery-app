@@ -19,7 +19,7 @@ function EmptyCart() {
               Your cart is empty
             </motion.p>
             <motion.p {...scaleIn(1.5)}
-             className="text-sm mt-0 md:text-md lg:text-lg md:mt-2 text-gray-500">
+             className="text-sm mt-0 md:text-md lg:text-[16px] md:mt-2 text-gray-500">
               Add some delicious food items!
             </motion.p>
           </div>
