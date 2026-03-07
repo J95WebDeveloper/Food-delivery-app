@@ -21,13 +21,13 @@ function Banner() {
 
         <div className="flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-between mt-8 lg:mt-10">
           <div>
-            <img src={chef} className="w-95" />
+            <img src={chef} className="w-72 md:w-95" />
           </div>
           <div className="flex flex-col items-center justify-center gap-15 md:gap-10">
             <div className="flex flex-col lg:flex-row items-center justify-center text-center md:translate-x-[-70%] lg:translate-x-[-20%]">
-              <img src={img1} className="w-52"></img>
+              <img src={img1} className="w-44 md:w-52"></img>
               <div className="w-80 mt-5 lg:w-125 md:mt-0">
-                <h1 className="font-dancing font-semibold text-4xl text-secondary mb-2">
+                <h1 className="font-dancing font-semibold text-3xl md:text-4xl text-secondary mb-2">
                   Fresh Ingrendients
                 </h1>
                 <p className="text-sm text-gray-500">
@@ -38,9 +38,9 @@ function Banner() {
               </div>
             </div>
             <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:translate-x-[10%]">
-              <img src={img2} className="w-52"></img>
+              <img src={img2} className="w-44 md:w-52"></img>
               <div className="w-80 lg:w-125 md:mt-0">
-                <h1 className="font-dancing font-semibold text-4xl text-secondary mb-2">
+                <h1 className="font-dancing font-semibold text-3xl md:text-4xl text-secondary mb-2">
                   Handmade Mozarella
                 </h1>
                 <p className="text-sm text-gray-500">
@@ -51,9 +51,9 @@ function Banner() {
               </div>
             </div>
             <div className="flex flex-col lg:flex-row items-center justify-center text-center md:translate-x-[-70%] lg:translate-x-[-20%]">
-              <img src={img3} className="w-52"></img>
+              <img src={img3} className="w-44 md:w-52"></img>
               <div className="w-80 mt-5 lg:w-125 md:mt-0">
-                <h1 className="font-dancing font-semibold text-4xl text-secondary mb-2">
+                <h1 className="font-dancing font-semibold text-3xl md:text-4xl text-secondary mb-2">
                   Secret Recipe Sauce
                 </h1>
                 <p className="text-sm text-gray-500">
