@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
     if (token) {
       try {
         const res = await axios.post(
-          "http://localhost:3000/api/cart/addcart",
+          "/api/cart/addcart",
           { itemId },
           { headers: { token } },
         );
@@ -54,7 +54,7 @@ export function AuthProvider({ children }) {
     if (token) {
       try {
         const res = await axios.post(
-          "http://localhost:3000/api/cart/removecart",
+          "/api/cart/removecart",
           { itemId },
           { headers: { token } },
         );
@@ -68,7 +68,7 @@ export function AuthProvider({ children }) {
   const getCartData = async (token) => {
     if (token) {
       try {
-        const res = await axios.get("http://localhost:3000/api/cart/getcart", {
+        const res = await axios.get("/api/cart/getcart", {
           headers: { token },
         });
         console.log(res.data.cartData);
@@ -99,7 +99,7 @@ export function AuthProvider({ children }) {
 
 const allFoods = async () => {
   try {
-    const res = await axios.get("http://localhost:3000/api/food/getFood");
+    const res = await axios.get("/api/food/getFood");
     setFoodList(res.data.foods);
   } catch (error) {
     console.log(error);
