@@ -58,7 +58,7 @@ function Header() {
 
         {/* buttons */}
         <div className="hidden md:flex items-center gap-6 lg:gap-8">
-          {token && <h1 className="font-medium">Hi, {user}</h1>}
+          {token && <h1 className="font-medium">Hi, {user?.name}</h1>}
           <Link to={"/cart"}>
             <div className="relative cursor-pointer">
               <BsCart4 size={25} className="cursor-pointer" />
@@ -92,7 +92,7 @@ function Header() {
         {/* mobile view */}
         <div className="md:hidden flex">
           <div className="flex items-center justify-center gap-5">
-            {token && <h1>Hi, {user}</h1>}
+            {token && <h1>Hi, {user?.name}</h1>}
             <Link to={"/cart"}>
               <div className="relative">
                 <BsCart4 size={20} className="cursor-pointer" />
