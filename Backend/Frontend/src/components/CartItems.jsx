@@ -11,12 +11,12 @@ function CartItems() {
     useAuth();
 
   return (
-    <div className="px-6 sm:px-12 lg:px-32 mt-5 lg:mt-15 md:mb-10 p-8">
+    <div className="px-6 sm:px-12 lg:px-32 mt-5 md:mt-15 md:mb-10 p-8">
       <div className="flex flex-col lg:flex-row gap-10 md:gap-20 justify-between">
         {/* left side */}
         <motion.div className="lg:flex-1">
           <h1 className="text-2xl md:text-3xl">
-            Your <span className="text-primary font-semibold">Cart</span>
+            Your <span className="text-secondary font-medium">Cart</span>
           </h1>
           <hr className="text-gray-300 my-2 mb-5 sm:mb-7" />
           <div className="">
@@ -78,9 +78,9 @@ function CartItems() {
 
         {/* right side */}
         <div className="relative">
-          <div className="bg-footer lg:w-[400px] w-full">
-            <div className="md:px-5 py-5">
-              <h1 className="text-2xl md:text-3xl font-medium">Summary</h1>
+          <div className="lg:w-[400px] w-full">
+            <div className="md:px-5 py-5 md:py-0">
+              <h1 className="text-2xl md:text-3xl">Summary</h1>
               <div className="mt-8 md:mt-12">
                 <div className="flex text-[16px] items-center justify-between text-gray-400">
                   <p>Subtotals</p>
