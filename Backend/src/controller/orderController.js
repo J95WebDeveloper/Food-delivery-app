@@ -3,8 +3,8 @@ import Order from "../schema/orderSchema.js";
 
 const placeOrder = async (req, res) => {
   try {
-    const { userId, items, amount, address, status, date } = req.body;
-
+    const { items, amount, address, status, date, payment } = req.body;
+    const userId = req.body.userId; 
     const newOrder = await Order({
       userId,
       items,
@@ -12,10 +12,11 @@ const placeOrder = async (req, res) => {
       address,
       status,
       date,
+      payment
     });
 
     await newOrder.save();
-    await User.findByIdAndUpdate(req.body.userId, { cartData: {} });
+    await User.findByIdAndUpdate(userId, { cartData: {} });
 
     const line_items = req.body.items.map((item) => ({
       price_data: {
