@@ -26,9 +26,9 @@ const schema = mongoose.Schema({
         type:Date,
         default: Date.now()
     },
-    payment: {
-        type:Boolean,
-        default: false
+     payment: {
+        type:String,
+        default: 'COD'
     },
 })
 
