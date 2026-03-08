@@ -20,7 +20,7 @@ function Responsive({ open, setOpen, setOpenLogin }) {
           exit={{ opacity: 0, y: -100 }}
           className="absolute top-30 left-0 w-full z-20 px-9">
           <div className="text-[15px] bg-white text-black">
-            <div className="flex flex-col text-center w-full">
+            <div className="flex flex-col text-center w-full shadow-xl">
               <a href="/" onClick={() => handleTag("home")}>
                 <div
                   className={`${
