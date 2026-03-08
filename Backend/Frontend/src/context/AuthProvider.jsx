@@ -11,7 +11,7 @@ export function AuthProvider({ children }) {
   const [token, setToken] = useState(getToken ? getToken : "");
   const [user, setUser] = useState(getUser ? getUser : []);
   const [foodList, setFoodList] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState({});
   const navigate = useNavigate();
 
   const totalQuantity = Object.values(cartItems).reduce(
@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
     if (token) {
       try {
         const res = await axios.post(
-          "/api/cart/addcart",
+          "http://localhost:3000/api/cart/addcart",
           { itemId },
           { headers: { token } },
         );
@@ -54,7 +54,7 @@ export function AuthProvider({ children }) {
     if (token) {
       try {
         const res = await axios.post(
-          "/api/cart/removecart",
+          "http://localhost:3000/api/cart/removecart",
           { itemId },
           { headers: { token } },
         );
@@ -68,7 +68,7 @@ export function AuthProvider({ children }) {
   const getCartData = async (token) => {
     if (token) {
       try {
-        const res = await axios.get("/api/cart/getcart", {
+        const res = await axios.get("http://localhost:3000/api/cart/getcart", {
           headers: { token },
         });
         console.log(res.data.cartData);
@@ -97,14 +97,14 @@ export function AuthProvider({ children }) {
     return totalAmount;
   };
 
-  const allFoods = async () => {
-    try {
-      const res = await axios.get("/api/food/getFood");
-      setFoodList(res.data.foods);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+const allFoods = async () => {
+  try {
+    const res = await axios.get("http://localhost:3000/api/food/getFood");
+    setFoodList(res.data.foods);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   useEffect(() => {
     allFoods();
