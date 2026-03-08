@@ -10,7 +10,7 @@ export const useLogin = async (values, setOpenLogin, setToken, setUser) => {
           console.log(res.data);
           handleSuccess(res.data.message);
           setToken(res.data.token)
-          setUser(res.data.user.name);
+          setUser(res.data.user);
           localStorage.setItem('token', res.data.token)
           localStorage.setItem('user', JSON.stringify(res.data.user))
           setTimeout(() => {
