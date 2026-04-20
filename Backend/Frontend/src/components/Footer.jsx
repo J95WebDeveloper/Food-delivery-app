@@ -8,7 +8,7 @@ function Footer() {
   return (
     <>
       <div
-        className="relative bg-black text-white z-10 wrapper" id="#footer">
+        className="relative bg-black text-white z-10 wrapper" id="footer">
         <div className="md:py-[3rem] p-6 px-6 sm:px-12 lg:px-32">
           <div className="grid grid-cols-1  md:grid-cols-[2fr_1fr_1fr] gap-10 md:gap-20">
             <div className="grid gap-5">
