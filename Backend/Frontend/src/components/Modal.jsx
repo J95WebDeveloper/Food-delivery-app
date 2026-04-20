@@ -23,7 +23,7 @@ function Modal({ item, offer, setOpen, handleAdd }) {
         </button>
       </div>
 
-      <div className="px-6 sm:px-12 mt-5 lg:px-64 lg:mt-8 md:mb-10">
+      <div className="px-6 sm:px-12 mt-5 lg:px-64 lg:mt-8 relative">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div>
             <img
@@ -32,20 +32,20 @@ function Modal({ item, offer, setOpen, handleAdd }) {
             />
           </div>
           <div className="w-80 md:w-130">
-            <p className=" text-light font-medium text-sm">{item.category}</p>
-            <h2 className="text-3xl lg:text-5xl font-medium md:truncate leading-normal">{item.name}</h2>
+            <p className="md:mb-1 text-light font-medium">{item.category}</p>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium">{item.name}</h2>
             <p className="mt-4 text-sm text-gray-400">{item.description}</p>
             <p className="py-4 font-medium text-lg">${item.price}.00 </p>
-            <p className="flex gap-2 w-20 items-center justify-center mb-6 md:mb-7 mt-2">
+            <p className="flex gap-2 w-20 items-center justify-center mb-6 md:mb-8 mt-2">
               <button
                 onClick={() => removeFromCart(item._id)}
-                className="bg-red-700 px-2 text-red-400 cursor-pointer font-bold">
+                className="bg-red-700 px-2 text-white cursor-pointer font-bold">
                 -
               </button>
               <span className="md:text-[18px]">{cartItems[item._id] || 0}</span>
               <button
                 onClick={() => addToCart(item._id)}
-                className="bg-green-700 text-green-400 text-center px-2 text-sm md:text-[15px] cursor-pointer">
+                className="bg-green-700 text-white text-center px-2 text-sm md:text-[15px] cursor-pointer">
                 +
               </button>
             </p>
@@ -55,7 +55,7 @@ function Modal({ item, offer, setOpen, handleAdd }) {
               Add to Cart
             </button>
 
-           { offer && <p className="mt-5 sm:mt-5 flex items-center gap-2 font-medium">
+           { offer && <p className="mt-5 sm:mt-7 flex items-center gap-2 font-medium">
               <span className="bg-secondary text-white px-3 py-1 font-medium flex items-center gap-2 text-sm">
                 <FaGift /> Offer</span> 
                 15% Off
@@ -98,7 +98,7 @@ function Modal({ item, offer, setOpen, handleAdd }) {
           </div>
         </div>
       </div>
-       <div className="hidden md:block absolute right-0 md:bottom-[-27%] lg:bottom-[-12%]">
+       <div className="hidden md:block absolute right-0 md:bottom-[-18%]">
         <img src={img1} className="md:w-90 lg:w-105" />
       </div>
     </motion.div>
