@@ -6,7 +6,7 @@ import chef from "../assets/chef.png";
 
 function Banner() {
   return (
-    <div className="bg-veg w-full z-0 h-full text-white" id="#banner">
+    <div className="bg-veg w-full z-0 h-full text-white" id="banner">
       <div className="px-6 sm:px-12 lg:px-32 py-8">
         <div className="flex items-center flex-col gap-2 py-5">
           <p className="text-secondary font-dancing font-semibold">CHOOSE YOUR FLAVOR</p>
