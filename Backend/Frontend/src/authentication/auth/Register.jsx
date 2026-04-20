@@ -20,10 +20,15 @@ function Register({ switchToLogin, setOpenLogin }) {
     setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (Validation(values)) {
-      useRegister(values, navigate, switchToLogin);
+      await useRegister(values, navigate, switchToLogin);
+      setValues({
+        name: "",
+        email: "",
+        password: "",
+      });
     }
   };
 
@@ -51,6 +56,7 @@ function Register({ switchToLogin, setOpenLogin }) {
             <input
               type="text"
               name="name"
+              value={values.name}
               onChange={handleChange}
               placeholder="enter your name"
               className="border-2 border-gray-400 w-full px-4 py-2 text-sm rounded-md focus:outline-none"
@@ -58,6 +64,7 @@ function Register({ switchToLogin, setOpenLogin }) {
             <input
               type="email"
               name="email"
+              value={values.email}
               onChange={handleChange}
               placeholder="enter your email"
               className="border-2 border-gray-400 w-full px-4 py-2 text-sm  rounded-md focus:outline-none"
@@ -67,6 +74,7 @@ function Register({ switchToLogin, setOpenLogin }) {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 onChange={handleChange}
+                value={values.password}
                 placeholder="enter your password"
                 className="focus:outline-none"
               />
