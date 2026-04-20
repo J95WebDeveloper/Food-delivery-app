@@ -94,7 +94,7 @@ function MyOrders() {
                   </p>
                   <button
                     onClick={fetchOrder}
-                    className="bg-primary text-white font-medium py-2 w-40"
+                    className="bg-primary text-white font-medium py-2 w-40 cursor-pointer"
                   >
                     Track Order
                   </button>
