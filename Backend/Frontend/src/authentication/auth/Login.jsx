@@ -20,10 +20,14 @@ function Login({ switchToRegister, setOpenLogin }) {
     setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (Validation(values)) {
-      useLogin(values, setOpenLogin, setToken, setUser);
+      await useLogin(values, setOpenLogin, setToken, setUser);
+      setValues({
+        email: "",
+        password: "",
+      });
     }
   };
 
@@ -51,6 +55,7 @@ function Login({ switchToRegister, setOpenLogin }) {
             <input
               type="email"
               name="email"
+              value={values.email}
               onChange={handleChange}
               placeholder="enter your email"
               className="border-2 border-gray-400 w-full px-4 py-2 text-sm rounded-md focus:outline-none"
@@ -59,6 +64,7 @@ function Login({ switchToRegister, setOpenLogin }) {
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
+                value={values.password}
                 onChange={handleChange}
                 placeholder="enter your password"
                 className="focus:outline-none"
