@@ -10,13 +10,13 @@ import olive from "../assets/home-olive.png";
 function Hero() {
   return (
     <div className="bg-black text-white">
-      <div className="px-6 sm:px-12 lg:px-32 pt-10">
+      <div className="px-6 sm:px-12 lg:px-32 pt-20">
         <div className="flex flex-col items-center md:justify-between md:flex-row gap-20 md:gap-0">
           <div className="flex flex-col md:w-[500px] lg:w-[600px]">
-            <span className="text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem] font-semibold">
+            <span className="text-[3rem] sm:text-[3.5rem] lg:text-[4.5rem] font-semibold">
               We Deliver The
             </span>
-            <span className="text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem] font-semibold">
+            <span className="text-[3rem] sm:text-[3.5rem] lg:text-[4.5rem] font-semibold">
               Taste Of <span className="text-primary">Life</span>
             </span>
             <p className="text-[0.8rem] sm:text-[0.9rem] text-gray-500 mt-3">
