@@ -37,7 +37,7 @@ function Hero() {
 
             <img
               src={leaf}
-              className="absolute top-60 right-10 w-12 sm:top-100 sm:right-10 sm:w-16 lg:w-18 lg:top-120 "
+              className="absolute top-75 right-10 w-12 sm:top-100 sm:right-10 sm:w-16 lg:w-18 lg:top-120 "
             />
             <img src={leaf2}
               className="absolute top-[-50px] sm:top-[-80%] sm:right-0 w-12 md:top-[-20px] md:right-130 lg:top-10 md:w-12 lg:right-200"
@@ -52,7 +52,7 @@ function Hero() {
             />
             <img
               src={brocc}
-              className="absolute top-55 left-[-25px] w-32 sm:top-85 sm:left-[-50px] sm:w-40 md:top-80 lg:top-100 lg:w-48 lg:left-[-50px]"
+              className="absolute top-65 left-[-25px] w-32 sm:top-85 sm:left-[-50px] sm:w-40 md:top-80 lg:top-100 lg:w-48 lg:left-[-50px]"
             />
           </div>
         </div>
