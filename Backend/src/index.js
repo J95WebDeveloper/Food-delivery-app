@@ -26,12 +26,12 @@ app.use('/api/order', orderRoutes)
 /*********   Deploy Code  ************/
 app.use(express.static(path.join(__dirname, "./Frontend/dist")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./Frontend/dist", "index.html"));
-});
-
 app.get("/ping", (req, res) => {
   res.send("OK");
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./Frontend/dist", "index.html"));
 });
 
 app.listen(PORT, () => {
