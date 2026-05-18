@@ -30,6 +30,9 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./Frontend/dist", "index.html"));
 });
 
+app.get("/ping", (req, res) => {
+  res.send("OK");
+});
 
 app.listen(PORT, () => {
     console.log(`Server is connected...${PORT}`)
